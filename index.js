@@ -298,7 +298,7 @@ function removeArtist(array, index) {
   return array.length
 }
 
-console.log('Task 5! 🚀')
+console.log('Task 5! 🚀');
 // console.log(removeArtist(artists, 0));
 
 
@@ -318,10 +318,24 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
+function addArtist(array) {
   /*Your Code Here*/
+  //create varible to hold data
+  const addedArtist = {
+    id: 20,
+    name: 'Christwide Oscar', 
+    years: '1999 - Nov 5',
+    genre: 'Web Design', 
+    nationality: 'Haitian American',
+    bio: 'A Father, son, developer, business owner. Trying to grow everyday and make the world a better place. Expand your knowledge so you can expand others minds!',
+  }
+  //push addedArtist to the end of array 
+  array.push(addedArtist);
+  return array
 }
 
+console.log('Task 6! 🚀');
+console.log(addArtist(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -331,10 +345,19 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
+function lotsOfArt(array) {
   /*Your Code Here*/
+  const paintArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].paintings >= 100){
+      paintArray.push(array[i].name)
+    }
+  }
+  return paintArray
 }
 
+console.log('Task 6! 🚀');
+console.log(lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
